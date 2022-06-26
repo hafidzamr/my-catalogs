@@ -1,0 +1,48 @@
+.card {
+  flex: 1 0 188px;
+  margin: 5px;
+  width: 16.66667%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  &__image {
+    border-radius: 5px 5px 0 0;
+  }
+
+  &__content {
+    padding: 10px;
+    &-title {
+      margin-top: 10px;
+      font-weight: 400;
+      font-size: 1rem;
+      margin-bottom: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-price {
+      font-weight: bold;
+      margin-top: 3px;
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 426px) and (max-width: 623px) {
+    max-width: 48%;
+  }
+  @media screen and (min-width: 624px) and (max-width: 769px) {
+    max-width: 32%;
+  }
+
+  @media screen and (min-width: 769px) {
+    flex: 1 0 210px;
+    max-width: 222px;
+  }
+}
