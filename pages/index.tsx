@@ -79,9 +79,11 @@ const Home = ({ productList }: Props) => {
 
       <section className={style['product__list']}>
         {products.map((product) => (
-          <NextLink href={`/detail/${product.id}`} key={product.id} passHref>
-            <Card image={product.images[0]} title={product.product_name} price={product.price} />
-          </NextLink>
+          <div key={product.id} className={style['product__list-item']}>
+            <NextLink href={`/detail/${product.id}`} passHref>
+              <Card image={product.images[0]} title={product.product_name} price={product.price} />
+            </NextLink>
+          </div>
         ))}
 
         {/* Trigger for fecthing next page */}
