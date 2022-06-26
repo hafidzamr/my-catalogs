@@ -32,7 +32,7 @@ const ImageSlider = ({ images, loop = true, ...rest }: ImageSliderProps) => {
 
       <Swiper onSwiper={setThumbsSwiper} spaceBetween={10} slidesPerView={5} modules={[Thumbs, Navigation]} className='image__thumbs'>
         {images?.map((image, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} >
             <div className='image__thumbs-wrapper'>
               <Image src={image} alt='product' width={60} height={60} objectFit='contain' />
             </div>

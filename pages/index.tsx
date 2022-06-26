@@ -70,6 +70,8 @@ const Home = ({ productList }: Props) => {
             <Card image={product.images[0]} title={product.product_name} price={product.price} />
           </NextLink>
         ))}
+
+        {/* [infinite scroll]  trigger for fecthing next page */}
         {page < MAX_PAGE && <div ref={triggerRef} className='mt-200' />}
       </section>
     </Layout>
