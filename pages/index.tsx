@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { GetServerSideProps } from 'next';
 import NextLink from 'next/link';
+import Image from 'next/image';
 import { useQuery } from 'react-query';
 
 import { fetcher } from '@/utils';
@@ -64,6 +65,18 @@ const Home = ({ productList }: Props) => {
 
   return (
     <Layout>
+      <div className={style['product__banner']}>
+        <Image
+          src='https://res.cloudinary.com/du4c8fvmo/image/upload/v1656236142/banner-_u1eifs.png'
+          width={300}
+          height={100}
+          alt='banner'
+          objectFit='cover'
+          layout='responsive'
+          className={style['product__banner-image']}
+        />
+      </div>
+
       <section className={style['product__list']}>
         {products.map((product) => (
           <NextLink href={`/detail/${product.id}`} key={product.id} passHref>
@@ -71,7 +84,7 @@ const Home = ({ productList }: Props) => {
           </NextLink>
         ))}
 
-        {/* [infinite scroll]  trigger for fecthing next page */}
+        {/* Trigger for fecthing next page */}
         {page < MAX_PAGE && <div ref={triggerRef} className='mt-200' />}
       </section>
     </Layout>
