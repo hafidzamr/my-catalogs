@@ -65,7 +65,7 @@ const Home = ({ productList }: Props) => {
 
   return (
     <Layout>
-      <div className={style['product__banner']}>
+      <section className={style['product__banner']}>
         <Image
           src='https://res.cloudinary.com/du4c8fvmo/image/upload/v1656236142/banner-_u1eifs.png'
           width={300}
@@ -75,7 +75,7 @@ const Home = ({ productList }: Props) => {
           layout='responsive'
           className={style['product__banner-image']}
         />
-      </div>
+      </section>
 
       <section className={style['product__list']}>
         {products.map((product) => (
