@@ -8,7 +8,7 @@ import { fetcher } from '@/utils';
 import { ProductProps } from '@/types';
 import Layout from '@/components/layout';
 
-import Card from '@/components/ui/Product/Card';
+import { ProductCard as Card } from '@/components/ui';
 import style from '@/styles/Product.module.scss';
 
 // because dont'have meta data from mock api,so i assume max page is 10

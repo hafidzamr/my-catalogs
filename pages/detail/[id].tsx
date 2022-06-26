@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next';
 
 import Layout from '@/components/layout';
-import ImageSlider from '@/components/ui/Product/ImageSlider';
+import { ProductImageSlider as ImageSlider } from '@/components/ui';
 import { fetcher, currencyFormatter } from '@/utils';
 import { ProductProps } from '@/types';
 
